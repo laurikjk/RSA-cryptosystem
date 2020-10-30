@@ -19,7 +19,7 @@ Project language: English
 * Euclidean Algorithm
   * to generate lowest common multiple
 * Extended Euclidean Algorith
-* Miller-Rabin
+* Miller-Rabin for propable primes
 
 ## Problem
 
