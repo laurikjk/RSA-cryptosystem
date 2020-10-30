@@ -6,5 +6,5 @@
 
 ### Weekly reports
 
-
+[Week 1](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/reports/week1.md)
 
