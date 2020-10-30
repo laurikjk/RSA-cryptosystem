@@ -15,6 +15,7 @@ Started and created the project. Researched the topic.
 
 ## What I've Learned
 
+A lot about different cryptosystems in general when researching for what I want to do. Also obviously a lot about RSA.
 
 ## Problems
 
@@ -24,3 +25,9 @@ since I last time have studied math but I like a challenge.
 I think it's only a matter of finding the right material.
 
 ## What's next
+
+* Implement RSA with java's own data structures like BigInteger and Random
+* what BigInteger actually is:
+  * how to make propable prime and miller rabin
+  * modpow
+  
