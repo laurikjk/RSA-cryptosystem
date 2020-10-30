@@ -15,7 +15,7 @@ Project language: English
 * Methods for big integer (add, substract, multiply etc.)
   * to do the calculations for the keys
 * Secure Random
-  * to generate a non-predictable random number
+  * to generate a secure random number
 * Euclidean Algorithm
   * to generate lowest common multiple
 * Extended Euclidean Algorith
