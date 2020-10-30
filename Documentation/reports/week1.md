@@ -9,6 +9,8 @@ I also created all the necessary things for the first week's deadline
 (maven project, git/github repository, labtool etc.) and  started researching
 my topic some more.  
 
+Hours: 5
+
 ## Progress
 
 Started and created the project. Researched the topic. 
@@ -30,4 +32,4 @@ I think it's only a matter of finding the right material.
 * what BigInteger actually is:
   * how to make propable prime and miller rabin
   * modpow
-  
+ 
