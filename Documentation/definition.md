@@ -32,3 +32,11 @@ Project language: English
 
 * They are O(n) 
   * Time depends on the key size
+
+## Sources
+
+https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+
+https://www.youtube.com/watch?v=oOcTVTpUsPQ&t=591s
+
+https://introcs.cs.princeton.edu/java/99crypto/
