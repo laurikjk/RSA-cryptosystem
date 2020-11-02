@@ -24,6 +24,8 @@ Project language: English
 
 * Generation of public and private keys
 * Encryption and decryption of a message
+* Padding the message
+* SHA
 
 
 ## Time and space complexity
