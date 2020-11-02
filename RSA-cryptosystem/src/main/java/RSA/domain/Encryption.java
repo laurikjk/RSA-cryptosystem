@@ -13,18 +13,6 @@ import java.math.BigInteger;
  */
 public class Encryption {
     
-//    BigInteger publicKey;
-//    BigInteger privateKey;
-//    BigInteger message;
-//    BigInteger n;
-//    
-//    public Encryption(BigInteger publicKey, BigInteger privateKey, BigInteger n, BigInteger message){
-//        this.publicKey = publicKey;
-//        this.privateKey = privateKey;
-//        this.message = message;
-//        this.n = n;
-//    }
-    
     public BigInteger encrypt(BigInteger publicKey, BigInteger message, BigInteger n){
         return message.modPow(publicKey, n);
     }

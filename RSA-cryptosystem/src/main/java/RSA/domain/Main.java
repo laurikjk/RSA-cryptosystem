@@ -29,10 +29,12 @@ public class Main {
         
         Encryption e = new Encryption();
         
+        System.out.println("Message: " + message);
+        
         BigInteger secret = e.encrypt(pub, message, n);
         System.out.println("Encrypted " + secret);
         
-        System.out.println(e.decrypt(priv, secret, n));
+        System.out.println("Decrypted: " + e.decrypt(priv, secret, n));
         
         
     }

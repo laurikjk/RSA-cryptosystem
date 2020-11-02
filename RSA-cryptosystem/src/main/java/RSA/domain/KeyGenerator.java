@@ -23,6 +23,7 @@ public class KeyGenerator {
     BigInteger phi;
     BigInteger n;
     BigInteger e;
+    BigInteger d;
     
     SecureRandom random;
     
@@ -40,9 +41,10 @@ public class KeyGenerator {
             phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
             e = new BigInteger("65537");
             n = p.multiply(q);
+            d = e.modInverse(phi);
 
             publicKey = e;
-            privateKey = publicKey.modInverse(phi);
+            privateKey = d;
             
             if(e.gcd(phi).equals(BigInteger.ONE)){
                 break;
