@@ -45,7 +45,6 @@ public class KeyGenerator {
             privateKey = publicKey.modInverse(phi);
             
             if(e.gcd(phi).equals(BigInteger.ONE)){
-                
                 break;
             }
         }

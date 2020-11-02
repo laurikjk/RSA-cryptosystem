@@ -7,6 +7,8 @@ package RSA.domain;
  */
 
 import RSA.domain.KeyGenerator;
+import RSA.domain.Encryption;
+import java.math.BigInteger;
 
 /**
  *
@@ -20,9 +22,19 @@ public class Main {
     public static void main(String[] args) {
         
         KeyGenerator g = new KeyGenerator(1024);
-        System.out.println(g.getPrivateKey());
-        System.out.println(g.getPublicKey());
-        System.out.println(g.getn());
+        BigInteger priv = g.getPrivateKey();
+        BigInteger pub = g.getPublicKey();
+        BigInteger n = g.getn();
+        BigInteger message = new BigInteger("1234");
+        
+        Encryption e = new Encryption();
+        
+        BigInteger secret = e.encrypt(pub, message, n);
+        System.out.println("Encrypted " + secret);
+        
+        System.out.println(e.decrypt(priv, secret, n));
+        
+        
     }
     
 }
