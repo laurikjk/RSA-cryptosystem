@@ -10,13 +10,9 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 
 /**
- *
- * @author lkajakko
+ * 
+ * @author LauriKajakko
  */
-
-
-
-
 public class KeyGenerator {
     BigInteger p;
     BigInteger q;
@@ -31,7 +27,10 @@ public class KeyGenerator {
     BigInteger privateKey;
     
     
-    
+    /**
+     * 
+     * @param size of the key 
+     */
     public KeyGenerator(int size) {
         
         random = new SecureRandom();
@@ -52,14 +51,26 @@ public class KeyGenerator {
         }
     }
     
+    /**
+     * 
+     * @return private key 
+     */
     public BigInteger getPrivateKey() {
         return privateKey;
     }
     
+    /**
+     * 
+     * @return public key 
+     */
+    
     public BigInteger getPublicKey() {
         return publicKey;
     }
-    
+    /**
+     * 
+     * @return n
+     */
     public BigInteger getn() {
         return n;
     }

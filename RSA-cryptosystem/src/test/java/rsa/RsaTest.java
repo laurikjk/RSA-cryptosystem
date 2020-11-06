@@ -1,5 +1,5 @@
 
-package RSA;
+package rsa;
 
 import rsa.domain.Encryption;
 import rsa.domain.KeyGenerator;
