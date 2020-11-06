@@ -7,6 +7,8 @@ import java.math.BigInteger;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
+import rsa.domain.PrivateKey;
+import rsa.domain.PublicKey;
 
 /**
  *
@@ -16,8 +18,8 @@ public class RsaTest {
     
     KeyGenerator g;
     Encryption e;
-    BigInteger priv;
-    BigInteger pub;
+    PrivateKey priv;
+    PublicKey pub;
     BigInteger n;
     
     @Before
@@ -26,14 +28,13 @@ public class RsaTest {
         e = new Encryption();
         priv = g.getPrivateKey();
         pub = g.getPublicKey();
-        n = g.getn();
     }
     
     @Test
     public void messageAndDecryptedMessageMatch() {
         BigInteger message = new BigInteger("1234567890");
-        BigInteger encrypted = e.encrypt(pub, message, n);
-        BigInteger decrypted = e.decrypt(priv, encrypted, n);
+        BigInteger encrypted = e.encrypt(pub, message);
+        BigInteger decrypted = e.decrypt(priv, encrypted);
         
         assertTrue(message.equals(decrypted));
     }
