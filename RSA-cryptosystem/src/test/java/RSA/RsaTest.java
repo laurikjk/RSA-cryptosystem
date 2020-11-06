@@ -1,8 +1,8 @@
 
 package RSA;
 
-import RSA.domain.Encryption;
-import RSA.domain.KeyGenerator;
+import rsa.domain.Encryption;
+import rsa.domain.KeyGenerator;
 import java.math.BigInteger;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;

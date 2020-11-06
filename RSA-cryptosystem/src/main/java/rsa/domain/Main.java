@@ -1,4 +1,4 @@
-package RSA.domain;
+package rsa.domain;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,8 +6,8 @@ package RSA.domain;
  * and open the template in the editor.
  */
 
-import RSA.domain.KeyGenerator;
-import RSA.domain.Encryption;
+import rsa.domain.KeyGenerator;
+import rsa.domain.Encryption;
 import java.math.BigInteger;
 
 /**

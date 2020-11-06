@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package RSA.domain;
+package rsa.domain;
 
 
 import java.math.BigInteger;
@@ -32,12 +32,12 @@ public class KeyGenerator {
     
     
     
-    public KeyGenerator(int N) {
+    public KeyGenerator(int size) {
         
         random = new SecureRandom();
         while(true){
-            p = BigInteger.probablePrime(N/2, random);
-            q = BigInteger.probablePrime(N/2, random);
+            p = BigInteger.probablePrime(size/2, random);
+            q = BigInteger.probablePrime(size/2, random);
             phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
             e = new BigInteger("65537");
             n = p.multiply(q);
