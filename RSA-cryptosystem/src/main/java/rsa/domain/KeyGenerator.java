@@ -8,32 +8,35 @@ package rsa.domain;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import rsa.domain.PrivateKey;
+import rsa.domain.PublicKey;
 
 /**
  * 
  * @author LauriKajakko
  */
 public class KeyGenerator {
-    BigInteger p;
-    BigInteger q;
-    BigInteger phi;
-    BigInteger n;
-    BigInteger e;
-    BigInteger d;
+    private BigInteger p;
+    private BigInteger q;
+    private BigInteger phi;
+    private BigInteger n;
+    private BigInteger e;
+    private BigInteger d;
     
-    SecureRandom random;
+    private SecureRandom random;
     
-    BigInteger publicKey;
-    BigInteger privateKey;
+    private PublicKey publicKey;
+    private PrivateKey privateKey;
     
     
     /**
      * 
-     * @param size of the key 
+     * @param size 
      */
     public KeyGenerator(int size) {
         
         random = new SecureRandom();
+        
         while(true){
             p = BigInteger.probablePrime(size/2, random);
             q = BigInteger.probablePrime(size/2, random);
@@ -42,8 +45,8 @@ public class KeyGenerator {
             n = p.multiply(q);
             d = e.modInverse(phi);
 
-            publicKey = e;
-            privateKey = d;
+            publicKey = new PublicKey(e, n);
+            privateKey = new PrivateKey(d, n);
             
             if(e.gcd(phi).equals(BigInteger.ONE)){
                 break;
@@ -55,7 +58,7 @@ public class KeyGenerator {
      * 
      * @return private key 
      */
-    public BigInteger getPrivateKey() {
+    public PrivateKey getPrivateKey() {
         return privateKey;
     }
     
@@ -64,16 +67,10 @@ public class KeyGenerator {
      * @return public key 
      */
     
-    public BigInteger getPublicKey() {
+    public PublicKey getPublicKey() {
         return publicKey;
     }
-    /**
-     * 
-     * @return n
-     */
-    public BigInteger getn() {
-        return n;
-    }
+    
     
     
 }

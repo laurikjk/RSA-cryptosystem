@@ -8,11 +8,13 @@ package rsa.domain;
 
 import rsa.domain.KeyGenerator;
 import rsa.domain.Encryption;
+import rsa.domain.PrivateKey;
+import rsa.domain.PublicKey;
 import java.math.BigInteger;
 
 /**
- *
- * @author lkajakko
+ * 
+ * @author LauriKajakko
  */
 public class Main {
 
@@ -22,19 +24,19 @@ public class Main {
     public static void main(String[] args) {
         
         KeyGenerator g = new KeyGenerator(1024);
-        BigInteger priv = g.getPrivateKey();
-        BigInteger pub = g.getPublicKey();
-        BigInteger n = g.getn();
+        PrivateKey priv = g.getPrivateKey();
+        PublicKey pub = g.getPublicKey();
+        
         BigInteger message = new BigInteger("1234");
         
         Encryption e = new Encryption();
         
         System.out.println("Message: " + message);
         
-        BigInteger secret = e.encrypt(pub, message, n);
+        BigInteger secret = e.encrypt(pub, message);
         System.out.println("Encrypted " + secret);
         
-        System.out.println("Decrypted: " + e.decrypt(priv, secret, n));
+        System.out.println("Decrypted: " + e.decrypt(priv, secret));
         
         
     }
