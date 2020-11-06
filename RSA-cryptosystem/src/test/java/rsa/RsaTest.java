@@ -30,6 +30,7 @@ public class RsaTest {
         pub = g.getPublicKey();
     }
     
+    
     @Test
     public void messageAndDecryptedMessageMatch() {
         BigInteger message = new BigInteger("1234567890");

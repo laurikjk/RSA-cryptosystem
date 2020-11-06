@@ -37,21 +37,15 @@ public class KeyGenerator {
         
         random = new SecureRandom();
         
-        while(true){
-            p = BigInteger.probablePrime(size/2, random);
-            q = BigInteger.probablePrime(size/2, random);
-            phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
-            e = new BigInteger("65537");
-            n = p.multiply(q);
-            d = e.modInverse(phi);
+        p = BigInteger.probablePrime(size/2, random);
+        q = BigInteger.probablePrime(size/2, random);
+        phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
+        e = new BigInteger("65537");
+        n = p.multiply(q);
+        d = e.modInverse(phi);
 
-            publicKey = new PublicKey(e, n);
-            privateKey = new PrivateKey(d, n);
-            
-            if(e.gcd(phi).equals(BigInteger.ONE)){
-                break;
-            }
-        }
+        publicKey = new PublicKey(e, n);
+        privateKey = new PrivateKey(d, n);
     }
     
     /**
