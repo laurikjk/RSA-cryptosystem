@@ -18,3 +18,5 @@ About the implementation of RSA and about padding and hashing
 * Is hashing and padding too time consuming for this course?
 
 * Is it possible to get a 5 without those?
+
+* In which document to put jacoco reports
