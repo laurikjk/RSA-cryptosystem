@@ -8,8 +8,6 @@ package rsa.domain;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import rsa.domain.PrivateKey;
-import rsa.domain.PublicKey;
 
 /**
  * 
@@ -31,7 +29,7 @@ public class KeyGenerator {
     
     /**
      * 
-     * @param size 
+     * @param size Size of the key
      */
     public KeyGenerator(int size) {
         
@@ -60,7 +58,6 @@ public class KeyGenerator {
      * 
      * @return public key 
      */
-    
     public PublicKey getPublicKey() {
         return publicKey;
     }

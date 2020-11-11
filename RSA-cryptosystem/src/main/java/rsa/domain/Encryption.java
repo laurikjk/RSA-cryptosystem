@@ -6,8 +6,6 @@
 package rsa.domain;
 
 import java.math.BigInteger;
-import rsa.domain.PrivateKey;
-import rsa.domain.PublicKey;
 
 /**
  * 
