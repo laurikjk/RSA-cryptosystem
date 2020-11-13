@@ -46,8 +46,7 @@ public class MessageConverter {
             for (int j = 3; j >=0; j--){
                 sb.append(convertedMessage.charAt(i-j));
             }
-            System.out.println(sb.toString());
-            int asciiCode = 0101;
+            int asciiCode = Integer.valueOf(sb.toString());
             result.append((char) asciiCode);
         }
 
@@ -66,7 +65,7 @@ public class MessageConverter {
         } else {
             int firstZero = 0;
             for (int i = 0; i < 4; i++){
-                if (messageToAddZeros.charAt(i) != zero) {
+                if (messageToAddZeros.charAt(i) == zero) {
                     firstZero=i;
                     break;
                 }

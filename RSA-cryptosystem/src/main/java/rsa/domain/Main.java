@@ -21,7 +21,7 @@ public class Main {
 
         MessageConverter mc = new MessageConverter();
 
-        System.out.println(mc.convertBigInteger(new BigInteger("01010101")));
+        System.out.println(mc.convertBigInteger(new BigInteger("00970098009901000101")));
 
     }
     
