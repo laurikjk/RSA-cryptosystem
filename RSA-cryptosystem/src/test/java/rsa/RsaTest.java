@@ -1,14 +1,14 @@
 
 package rsa;
 
-import rsa.domain.Encryption;
-import rsa.domain.KeyGenerator;
+import rsa.datastructures.BigInt;
+import rsa.domain.*;
+
 import java.math.BigInteger;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
-import rsa.domain.PrivateKey;
-import rsa.domain.PublicKey;
 
 /**
  *
@@ -20,14 +20,15 @@ public class RsaTest {
     Encryption e;
     PrivateKey priv;
     PublicKey pub;
-    BigInteger n;
-    
+    MessageConverter messageConverter;
+
     @Before
     public void setUp() {
         g = new KeyGenerator(1024);
         e = new Encryption();
         priv = g.getPrivateKey();
         pub = g.getPublicKey();
+        messageConverter = new MessageConverter();
     }
     
     
@@ -39,12 +40,16 @@ public class RsaTest {
         
         assertTrue(message.equals(decrypted));
     }
-    
-    
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void messageStringToBigIntegerReturnsRightNumber() {
+        String message = "abcde";
+        assertEquals(new BigInteger("970098009901000101"),messageConverter.convertString(message));
+    }
+
+    @Test
+    public void messageBigIntegerToStringReturnsRightString() {
+        BigInteger message = new BigInteger("00970098009901000101");
+        assertEquals("abcde", messageConverter.convertBigInteger(message));
+    }
 }

@@ -13,8 +13,22 @@ public class MessageConverter {
      * @return message as a big integer
      */
     public BigInteger convertString(String message) {
-        // do sum
-        return new BigInteger("1");
+        byte[] messageAsBytes = message.getBytes();
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for(byte b : messageAsBytes){
+            String toBeAppended = Integer.toString(b);
+            if (toBeAppended.length()==2){
+                toBeAppended="00"+toBeAppended;
+            } else {
+                toBeAppended="0"+toBeAppended;
+            }
+
+            stringBuilder.append(toBeAppended);
+        }
+
+        BigInteger convertedMessage = new BigInteger(stringBuilder.toString());
+        return convertedMessage;
     }
 
     /**
@@ -22,9 +36,50 @@ public class MessageConverter {
      * @param message as a big integer
      * @return message as a string
      */
-    public String convertNumber(BigInteger message) {
-        //do sum
-        return "message";
+    public String convertBigInteger(BigInteger message) {
+        String convertedMessage = message.toString();
+        convertedMessage = addZerosToBeginning(convertedMessage);
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 3; i < convertedMessage.length(); i+=4){
+            StringBuilder sb = new StringBuilder();
+            for (int j = 3; j >=0; j--){
+                sb.append(convertedMessage.charAt(i-j));
+            }
+            System.out.println(sb.toString());
+            int asciiCode = 0101;
+            result.append((char) asciiCode);
+        }
+
+        return result.toString();
+
+
+    }
+
+
+    private String addZerosToBeginning(String messageToAddZeros){
+        char zero = "0".charAt(0);
+        if (messageToAddZeros.length() == 2){
+            messageToAddZeros="00"+messageToAddZeros;
+        } else if (messageToAddZeros.length() == 3){
+            messageToAddZeros="0"+messageToAddZeros;
+        } else {
+            int firstZero = 0;
+            for (int i = 0; i < 4; i++){
+                if (messageToAddZeros.charAt(i) != zero) {
+                    firstZero=i;
+                    break;
+                }
+            }
+            if (firstZero == 2){
+                messageToAddZeros="00"+messageToAddZeros;
+            } else {
+                messageToAddZeros="0"+messageToAddZeros;
+            }
+        }
+
+        return messageToAddZeros;
+
     }
 
 }
