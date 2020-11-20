@@ -30,13 +30,14 @@ public class KeyGenerator {
     public KeyGenerator(int size) {
         
         random = new SecureRandom();
-        
-        p = BigInteger.probablePrime(size/2, random);
-        q = BigInteger.probablePrime(size/2, random);
+
+        p = BigInteger.probablePrime(size, random);
+        q = BigInteger.probablePrime(size, random);
         phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
         e = new BigInteger("65537");
         n = p.multiply(q);
         d = e.modInverse(phi);
+
 
         publicKey = new PublicKey(e, n);
         privateKey = new PrivateKey(d, n);

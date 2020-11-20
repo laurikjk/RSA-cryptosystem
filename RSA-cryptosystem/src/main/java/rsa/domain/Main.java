@@ -6,6 +6,8 @@ package rsa.domain;
  * and open the template in the editor.
  */
 
+import rsa.algorithms.MillerRabin;
+
 import java.math.BigInteger;
 
 /**
@@ -22,6 +24,15 @@ public class Main {
         MessageConverter mc = new MessageConverter();
 
         System.out.println(mc.convertBigInteger(new BigInteger("00970098009901000101")));
+
+
+        MillerRabin mr = new MillerRabin();
+
+        boolean b = mr.test(new BigInteger("65537"), 10);
+
+        System.out.println(b);
+
+
 
     }
     

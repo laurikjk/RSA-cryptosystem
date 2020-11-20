@@ -1,7 +1,6 @@
 
 package rsa;
 
-import rsa.datastructures.BigInt;
 import rsa.domain.*;
 
 import java.math.BigInteger;
@@ -31,7 +30,6 @@ public class RsaTest {
         messageConverter = new MessageConverter();
     }
     
-    
     @Test
     public void messageAndDecryptedMessageMatch() {
         BigInteger message = new BigInteger("1234567890");
@@ -44,7 +42,7 @@ public class RsaTest {
     @Test
     public void messageStringToBigIntegerReturnsRightNumber() {
         String message = "abcde";
-        assertEquals(new BigInteger("970098009901000101"),messageConverter.convertString(message));
+        assertEquals(new BigInteger("00970098009901000101"), messageConverter.convertString(message));
     }
 
     @Test

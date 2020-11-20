@@ -55,7 +55,12 @@ public class MessageConverter {
 
     }
 
-
+    /**
+     * 
+     *
+     * @param messageToAddZeros
+     * @return message with zeros added to the beginning
+     */
     private String addZerosToBeginning(String messageToAddZeros){
         char zero = "0".charAt(0);
         if (messageToAddZeros.length() == 2){
