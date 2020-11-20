@@ -4,6 +4,8 @@ package rsa;
 import rsa.domain.*;
 
 import java.math.BigInteger;
+import java.util.Random;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
@@ -33,9 +35,34 @@ public class RsaTest {
     @Test
     public void messageAndDecryptedMessageMatch() {
         BigInteger message = new BigInteger("1234567890");
+        System.out.println("Time with a small messsage.\nMessage: \n"+ message + "\n");
+        long time1 = System.nanoTime();
         BigInteger encrypted = e.encrypt(pub, message);
+        long time2 = System.nanoTime();
         BigInteger decrypted = e.decrypt(priv, encrypted);
-        
+        long time3 = System.nanoTime();
+
+        System.out.println("encryption time in nanoseconds: " + (time2-time1));
+        System.out.println("decryption time in nanoseconds: " + (time3-time2));
+        System.out.println("---\n");
+
+        assertTrue(message.equals(decrypted));
+    }
+
+    @Test
+    public void messageAndDecryptedMessageMatchWithLargest() {
+        BigInteger message = BigInteger.probablePrime(117*8, new Random());
+        System.out.println("Time with a 117byte messsage.\nMessage: \n"+ message + "\n");
+        long time1 = System.nanoTime();
+        BigInteger encrypted = e.encrypt(pub, message);
+        long time2 = System.nanoTime();
+        BigInteger decrypted = e.decrypt(priv, encrypted);
+        long time3 = System.nanoTime();
+
+        System.out.println("encryption time in nanoseconds: " + (time2-time1));
+        System.out.println("decryption time in nanoseconds: " + (time3-time2));
+        System.out.println("---\n");
+
         assertTrue(message.equals(decrypted));
     }
 
@@ -50,4 +77,5 @@ public class RsaTest {
         BigInteger message = new BigInteger("00970098009901000101");
         assertEquals("abcde", messageConverter.convertBigInteger(message));
     }
+
 }

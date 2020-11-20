@@ -21,16 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        MessageConverter mc = new MessageConverter();
-
-        System.out.println(mc.convertBigInteger(new BigInteger("00970098009901000101")));
-
-
-        MillerRabin mr = new MillerRabin();
-
-        boolean b = mr.test(new BigInteger("65537"), 10);
-
-        System.out.println(b);
+        
 
 
 
