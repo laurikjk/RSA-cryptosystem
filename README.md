@@ -8,4 +8,4 @@
 
 ### Weekly reports
 
-[Reports](https://github.com/LauriKajakko/RSA-cryptosystem/tree/main/Documentation/reports)
+[Reports directory](https://github.com/LauriKajakko/RSA-cryptosystem/tree/main/Documentation/reports)
