@@ -21,7 +21,11 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        
+        MillerRabin algo = new MillerRabin();
+
+        boolean a = algo.test(new BigInteger("65538"), 10);
+
+        System.out.println(a);
 
 
 

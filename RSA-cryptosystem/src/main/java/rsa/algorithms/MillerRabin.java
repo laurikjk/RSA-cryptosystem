@@ -5,6 +5,52 @@ import java.security.SecureRandom;
 
 public class MillerRabin {
 
+    private final BigInteger ZERO = BigInteger.ZERO;
+    private final BigInteger ONE = BigInteger.ONE;
+    private final BigInteger TWO = new BigInteger("2");
+    private final BigInteger THREE = new BigInteger("3");
+
+    public boolean test(BigInteger primeCandidate, int rounds) {
+        /*
+        n                 = 2^r * d + 1
+        n - 1             = 2^r * d
+        (n - 1) / ( 2^r ) = d
+        where n is primeCandidate,
+        r is a integer
+        and d is an odd integer (optimize later)
+         */
+        BigInteger d = primeCandidate.subtract(ONE);
+        int r = 0;
+        while (d.equals(ZERO)) {
+            r++;
+            d = d.divide(TWO);
+        }
+
+        for (int i = 0; i < rounds; i++){
+            BigInteger a = rand(primeCandidate.subtract(TWO));
+            BigInteger x = a.modPow(d, primeCandidate);
+            if (x.equals(ONE) || x.equals(primeCandidate.subtract(ONE))) continue;
+            for (int j = 0; j < r; j++) {
+                x = x.modPow(TWO, primeCandidate);
+                if (x.equals(ONE)) return false;
+                if (x.equals(primeCandidate.subtract(ONE))) continue;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    private BigInteger rand(BigInteger max) {
+        SecureRandom secrnd = new SecureRandom();
+        BigInteger rnd;
+        do {
+            rnd = new BigInteger(max.bitLength(), secrnd);
+        } while (rnd.compareTo(TWO) < 0 || rnd.compareTo(max) >= 0);
+        return rnd;
+    }
+
+
+    /*
     public boolean test(BigInteger primeCandidate, int rounds){
         BigInteger primeMinusOne = primeCandidate.subtract(BigInteger.ONE);
         System.out.println("primeminusone: " + primeMinusOne);
@@ -27,15 +73,13 @@ public class MillerRabin {
         BigInteger m = primeCandidate.divide(two.pow(exponent));
         System.out.println("m: " + m);
 
-        //step 2 pick 2 <= a < n-1
-        BigInteger max = primeMinusOne.subtract(BigInteger.ONE);
-        SecureRandom secrnd = new SecureRandom();
-
-        System.out.println("max: " +max);
-
-        //step 3
-
         for (int i = 0; i<rounds; i++){
+
+            BigInteger max = primeMinusOne.subtract(BigInteger.ONE);
+            SecureRandom secrnd = new SecureRandom();
+
+            System.out.println("max: " +max);
+
             BigInteger rnd;
             do {
                 rnd = new BigInteger(max.bitLength(), secrnd);
@@ -45,21 +89,22 @@ public class MillerRabin {
             System.out.println("b: " + b);
 
             if(b.equals(BigInteger.ONE) || b.equals(primeCandidate.subtract(BigInteger.ONE))) continue;
-
+            System.out.println("wasn't one or n-1");
             //broken-->
-            int j = 0;
-            while(true){
+            for (int j = 0; j < exponent; j++){
+                System.out.println("while loop " + j + " and b value " + b.toString());
                 if(b.equals(BigInteger.ONE)) return false;
-                if(b.equals(new BigInteger("-1"))) continue;
+                if(b.equals(primeCandidate.subtract(new BigInteger("1")))) continue;
                 b = b.modPow(two, primeCandidate);
-                j++;
-                if (j == exponent) return false;
+                if(j==exponent-1) return false;
             }
 
         }
         return true;
     }
 
+
+     */
 
 
 }
