@@ -11,6 +11,11 @@ public class MillerRabin {
     private final BigInteger THREE = new BigInteger("3");
 
     public boolean test(BigInteger primeCandidate, int rounds) {
+        //Test small cases first
+        int small = primeCandidate.intValue();
+        if (small == 1 || small == 4 || small == 6 || small == 8) return false;
+        if (small == 2 || small == 3 || small == 5 || small == 7) return true;
+
         /*
         n                 = 2^r * d + 1
         n - 1             = 2^r * d

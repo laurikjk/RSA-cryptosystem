@@ -23,7 +23,7 @@ public class Main {
 
         MillerRabin algo = new MillerRabin();
 
-        boolean a = algo.test(new BigInteger("65538"), 10);
+        boolean a = algo.test(new BigInteger("3"), 10);
 
         System.out.println(a);
 
