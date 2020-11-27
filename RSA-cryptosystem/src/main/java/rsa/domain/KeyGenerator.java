@@ -24,8 +24,10 @@ public class KeyGenerator {
     
     
     /**
+     *  Generates keys when class gets called
+     *  Keys can be called through getters
      * 
-     * @param size Size of the key
+     * @param size Size of the key in bit length
      */
     public KeyGenerator(int size) {
         

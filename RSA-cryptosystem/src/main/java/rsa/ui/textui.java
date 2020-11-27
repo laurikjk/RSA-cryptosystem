@@ -1,14 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package rsa.ui;
+
+import rsa.domain.*;
+import rsa.utils.MessageConverter;
 
 /**
  *
  * @author lkajakko
  */
 public class textui {
+
+    private Encryption encryption;
+    private KeyGenerator keyGenerator;
+    private MessageConverter messageConverter;
+    private PrivateKey privateKey;
+    private PublicKey publicKey;
+
+    public textui() {
+
+    }
+
     
 }

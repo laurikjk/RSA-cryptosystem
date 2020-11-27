@@ -1,4 +1,4 @@
-package rsa.domain;
+package rsa.utils;
 
 import java.math.BigInteger;
 
