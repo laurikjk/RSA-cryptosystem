@@ -2,7 +2,7 @@ package rsa.algorithms;
 
 import java.math.BigInteger;
 
-public class ExtendedEucledianAlgorithm {
+public class ExtendedEuclideanAlgorithm {
 
     private BigInteger zero = new BigInteger("0");
     private BigInteger one = new BigInteger("1");

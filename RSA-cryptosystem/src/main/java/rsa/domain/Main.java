@@ -6,8 +6,7 @@ package rsa.domain;
  * and open the template in the editor.
  */
 
-import rsa.algorithms.ExtendedEucledianAlgorithm;
-import rsa.algorithms.MillerRabin;
+import rsa.algorithms.ExtendedEuclideanAlgorithm;
 
 import java.math.BigInteger;
 
@@ -22,7 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        ExtendedEucledianAlgorithm eea = new ExtendedEucledianAlgorithm();
+        ExtendedEuclideanAlgorithm eea = new ExtendedEuclideanAlgorithm();
 
         BigInteger[] test = new BigInteger[3];
         test = eea.xgcd(new BigInteger("42823"), new BigInteger("6409"));
