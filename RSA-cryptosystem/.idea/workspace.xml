@@ -24,10 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f3fd05e-3693-4783-a068-56a77b9975ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/KeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/KeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/MessageConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/utils/MessageConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/ui/textui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/ui/textui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/algorithms/ExtendedEucledianAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/ExtendedEucledianAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,28 +113,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606325670378">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="2655" y="291" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606558645258">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2655" y="291" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606558645258" />
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606325670378" />
-    <state width="1802" height="210" key="GridCell.Tab.0.bottom" timestamp="1606325671499">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state width="914" height="223" key="GridCell.Tab.0.bottom" timestamp="1606663582441">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="223" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606663582441" />
+    <state width="878" height="216" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1606588472142" />
     <state width="1802" height="210" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606325671499" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom/72.27.3768.1053@72.27.3768.1053" timestamp="1605276008512" />
-    <state width="1802" height="210" key="GridCell.Tab.0.center" timestamp="1606325671497">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state width="914" height="223" key="GridCell.Tab.0.center" timestamp="1606663582441">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="223" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606663582441" />
+    <state width="878" height="216" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1606588472142" />
     <state width="1802" height="210" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606325671497" />
     <state width="1874" height="275" key="GridCell.Tab.0.center/72.27.3768.1053@72.27.3768.1053" timestamp="1605276008511" />
-    <state width="1802" height="210" key="GridCell.Tab.0.left" timestamp="1606325671495">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state width="914" height="223" key="GridCell.Tab.0.left" timestamp="1606663582441">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="223" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606663582441" />
+    <state width="878" height="216" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1606588472142" />
     <state width="1802" height="210" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606325671495" />
     <state width="1874" height="275" key="GridCell.Tab.0.left/72.27.3768.1053@72.27.3768.1053" timestamp="1605276008510" />
-    <state width="1802" height="210" key="GridCell.Tab.0.right" timestamp="1606325671498">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state width="914" height="223" key="GridCell.Tab.0.right" timestamp="1606663582441">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="223" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606663582441" />
+    <state width="878" height="216" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1606588472142" />
     <state width="1802" height="210" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606325671498" />
     <state width="1874" height="275" key="GridCell.Tab.0.right/72.27.3768.1053@72.27.3768.1053" timestamp="1605276008512" />
     <state x="605" y="214" width="772" height="686" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605264317335">
