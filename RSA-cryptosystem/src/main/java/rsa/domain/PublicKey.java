@@ -17,7 +17,7 @@ public class PublicKey {
     private BigInteger e;
     
     /**
-     * Private Key for RSA-algorithm
+     * Public Key for RSA-algorithm
      * 
      * @param n modulus for private and public keys
      * @param e exponent used for RSA-algorithm
@@ -33,6 +33,11 @@ public class PublicKey {
 
     public BigInteger getE() {
         return e;
+    }
+
+    @Override
+    public String toString() {
+        return this.getN() + ":" + this.getE();
     }
     
 }

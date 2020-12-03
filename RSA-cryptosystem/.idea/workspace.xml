@@ -23,11 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3fd05e-3693-4783-a068-56a77b9975ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/ProbablePrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/RandomNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rsa/ui/TextUi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/algorithms/ExtendedEuclideanAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/ExtendedEuclideanAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/KeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/KeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/algorithms/MillerRabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/MillerRabin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/PrivateKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/PrivateKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/PublicKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/ui/textui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rsa/AlgorithmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rsa/AlgorithmsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

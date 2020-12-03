@@ -21,7 +21,6 @@ public class AlgorithmsTest {
     @Test
     public void millerRabinReturnsTrueWithPrimes() {
         for (String prime : primes) {
-            System.out.println("started Prime: " + prime);
             BigInteger candidate = new BigInteger(prime);
             boolean pass = millerRabin.test(candidate, 10);
             assertTrue(pass);
@@ -31,7 +30,6 @@ public class AlgorithmsTest {
     @Test
     public void millerRabinReturnsFalseWithNonPrimes() {
         for (String nonPrime : nonPrimes) {
-            System.out.println("started nonPrime: "+ nonPrime);
             BigInteger candidate = new BigInteger(nonPrime);
             boolean pass = millerRabin.test(candidate, 10);
             assertTrue(!pass);

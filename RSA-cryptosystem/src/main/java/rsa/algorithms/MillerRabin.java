@@ -5,10 +5,8 @@ import java.security.SecureRandom;
 
 public class MillerRabin {
 
-    private final BigInteger ZERO = BigInteger.ZERO;
-    private final BigInteger ONE = BigInteger.ONE;
-    private final BigInteger TWO = new BigInteger("2");
-    private final BigInteger THREE = new BigInteger("3");
+    // BigInteger.TWO doesn't work
+    private final BigInteger two = new BigInteger("2");
 
     /**
      *         n                 = 2^r * d + 1
@@ -29,21 +27,21 @@ public class MillerRabin {
         if (small == 2 || small == 3 || small == 5 || small == 7) return true;
 
         //Miller-Rabin
-        BigInteger d = primeCandidate.subtract(ONE);
+        BigInteger d = primeCandidate.subtract(BigInteger.ONE);
         int r = 0;
-        while (d.equals(ZERO)) {
+        while (d.equals(BigInteger.ZERO)) {
             r++;
-            d = d.divide(TWO);
+            d = d.divide(two);
         }
 
         for (int i = 0; i < rounds; i++){
-            BigInteger a = rand(primeCandidate.subtract(TWO));
+            BigInteger a = rand(primeCandidate.subtract(two));
             BigInteger x = a.modPow(d, primeCandidate);
-            if (x.equals(ONE) || x.equals(primeCandidate.subtract(ONE))) continue;
+            if (x.equals(BigInteger.ONE) || x.equals(primeCandidate.subtract(BigInteger.ONE))) continue;
             for (int j = 0; j < r; j++) {
-                x = x.modPow(TWO, primeCandidate);
-                if (x.equals(ONE)) return false;
-                if (x.equals(primeCandidate.subtract(ONE))) continue;
+                x = x.modPow(two, primeCandidate);
+                if (x.equals(BigInteger.ONE)) return false;
+                if (x.equals(primeCandidate.subtract(BigInteger.ONE))) continue;
             }
             return false;
         }
@@ -60,7 +58,7 @@ public class MillerRabin {
         BigInteger rnd;
         do {
             rnd = new BigInteger(max.bitLength(), secrnd);
-        } while (rnd.compareTo(TWO) < 0 || rnd.compareTo(max) >= 0);
+        } while (rnd.compareTo(two) < 0 || rnd.compareTo(max) >= 0);
         return rnd;
     }
 
