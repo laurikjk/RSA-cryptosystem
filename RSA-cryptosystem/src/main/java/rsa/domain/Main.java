@@ -7,8 +7,11 @@ package rsa.domain;
  */
 
 import rsa.algorithms.ExtendedEuclideanAlgorithm;
+import rsa.algorithms.MillerRabin;
+import rsa.algorithms.ProbablePrime;
 
 import java.math.BigInteger;
+import java.util.Random;
 
 /**
  * 
@@ -21,17 +24,25 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        ExtendedEuclideanAlgorithm eea = new ExtendedEuclideanAlgorithm();
+        ProbablePrime p = new ProbablePrime(1024, 10, new Random());
 
-        BigInteger[] test = new BigInteger[3];
-        test = eea.xgcd(new BigInteger("42823"), new BigInteger("6409"));
+        BigInteger test = p.generateLargePrime();
 
+        System.out.println(test);
 
-        System.out.println(test[0]);
-        System.out.println(test[1]);
-        System.out.println(test[2]);
+        MillerRabin millerRabin = new MillerRabin();
+
+        boolean test2 = millerRabin.test(new BigInteger("90324590832490832598"), 10);
+
+        System.out.println("test2: " + test2);
+
+        boolean testwithnormal = test.isProbablePrime(100);
+
+        System.out.println(testwithnormal);
+
+        KeyGenerator kg = new KeyGenerator(1024);
+
 
 
     }
-    
 }
