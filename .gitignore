@@ -1,15 +1,13 @@
-/RSA-cryptosystem/target/
-/RSA-cryptosystem/nbproject/
-/RSA-cryptosystem/.idea
-/RSA-cryptosystem/RSA-cryptosystem.iml
-/RSA-cryptosystem/.settings
-/RSA-cryptosystem/.classpath
-/RSA-cryptosystem/.project
-/RSA-cryptosystem/RSA-cryptosystem.iml
-/RSA-cryptosystem/encrypted.txt
-/RSA-cryptosystem/keys.txt
-/RSA-cryptosystem/nb-configuration.xml
-/RSA-cryptosystem/nbactions.xml
+RSA-cryptosystem/target/
+RSA-cryptosystem/nbproject/
+RSA-cryptosystem/.idea
+RSA-cryptosystem/RSA-cryptosystem.iml
+RSA-cryptosystem/.settings
+RSA-cryptosystem/RSA-cryptosystem.iml
+RSA-cryptosystem/encrypted.txt
+RSA-cryptosystem/keys.txt
+RSA-cryptosystem/nb-configuration.xml
+RSA-cryptosystem/nbactions.xml
 
 
 
