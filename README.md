@@ -10,7 +10,7 @@ Implementation of RSA-cryptosystem and the algorithms it uses.
 
 [Instructions](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/Instructions.md)
 
-[Implementation (toteutusdokumentti)](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/Implementation)
+[Implementation (toteutusdokumentti)](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/Implementation.md)
 
 ### Weekly reports
 
