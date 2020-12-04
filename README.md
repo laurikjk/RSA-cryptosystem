@@ -6,6 +6,8 @@
 
 [Test document](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/test_document.md)
 
+[Instructions](https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/Instructions.md)
+
 ### Weekly reports
 
 [Reports directory](https://github.com/LauriKajakko/RSA-cryptosystem/tree/main/Documentation/reports)
