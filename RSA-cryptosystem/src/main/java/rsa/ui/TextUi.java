@@ -16,13 +16,13 @@ public class TextUi {
     private MessageConverter converter;
     private Encryption encryption;
 
-    public TextUi() throws IOException {
+    public TextUi() {
         scanner = new Scanner(System.in);
         converter = new MessageConverter();
         encryption = new Encryption();
     }
 
-    public void run() throws IOException {
+    public void run() {
         String action;
         printInfo();
         while(true) {
@@ -64,18 +64,12 @@ public class TextUi {
             Scanner input = new Scanner(System.in);
             System.out.print("Message: ");
             String message = input.nextLine();
-
             BigInteger converted = converter.convertString(message);
-            System.out.println("Converted to a String of ascii codes: " + converted);
-
             PublicKey pub = new PublicKey(new BigInteger(publicKeyString[0]), new BigInteger(publicKeyString[1]));
             BigInteger encrypted = encryption.encrypt(pub, converted);
             FileWriter writer = new FileWriter("encrypted.txt");
             writer.write(encrypted.toString());
             writer.close();
-
-            System.out.println("Your encrypted message: " + encrypted);
-
             System.out.println("Encrypted message is now in file \"encrypted.txt\" in this directory. \n");
 
 
@@ -90,19 +84,15 @@ public class TextUi {
             Scanner scanner = new Scanner(new FileInputStream("keys.txt"));
             String[] publicKeyString = scanner.nextLine().split(":");
             String[] privateKeyString = scanner.nextLine().split(":");
-            System.out.println("Keys found. Using your private key to decrypt the message.");
-
+            System.out.println("Keys found. Using your private key to decrypt the message. \n");
             scanner = new Scanner((new FileInputStream("encrypted.txt")));
             String encrypted = scanner.nextLine();
             scanner.close();
-            System.out.println("Encrypted message found: \n" + encrypted);
             PrivateKey priv = new PrivateKey(new BigInteger(privateKeyString[0]), new BigInteger(privateKeyString[1]));
             BigInteger decrypted = encryption.decrypt(priv, new BigInteger(encrypted));
-
             String conversion = converter.convertBigInteger(decrypted);
-            System.out.println("Decrypted: \n" + decrypted);
-
-            System.out.println("Original message: \n" + conversion);
+            System.out.println("Encrypted message: \n" + encrypted + "\n");
+            System.out.println("Decrypted message: \n" + conversion + "\n");
 
 
         }catch (IOException e) {
