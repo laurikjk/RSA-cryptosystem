@@ -37,7 +37,7 @@ public class PrivateKey {
 
     @Override
     public String toString() {
-        return this.getN() + ":" + this.getD();
+        return this.getD() + ":" + this.getN();
     }
     
 }

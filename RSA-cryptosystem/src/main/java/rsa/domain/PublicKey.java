@@ -37,7 +37,7 @@ public class PublicKey {
 
     @Override
     public String toString() {
-        return this.getN() + ":" + this.getE();
+        return this.getE() + ":" + this.getN();
     }
     
 }

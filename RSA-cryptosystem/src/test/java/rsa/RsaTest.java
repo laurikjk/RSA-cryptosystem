@@ -61,4 +61,14 @@ public class RsaTest {
         assertEquals("abcde", messageConverter.convertBigInteger(message));
     }
 
+    @Test
+    public void endToEndTest() {
+        String message = "Hello World!";
+        BigInteger convertedMessage = messageConverter.convertString(message);
+        BigInteger encrypted = e.encrypt(pub, convertedMessage);
+        BigInteger decrypted = e.decrypt(priv, encrypted);
+        String result = messageConverter.convertBigInteger(decrypted);
+        assertEquals(message, result);
+    }
+
 }

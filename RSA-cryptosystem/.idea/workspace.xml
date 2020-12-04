@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3fd05e-3693-4783-a068-56a77b9975ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/RandomNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rsa/ui/TextUi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/algorithms/MillerRabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/algorithms/MillerRabin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/PrivateKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/PrivateKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rsa/domain/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/domain/PublicKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/ui/textui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rsa/AlgorithmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rsa/AlgorithmsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsa/ui/TextUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsa/ui/TextUi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rsa/RsaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,5 +108,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/rsa/RsaTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
