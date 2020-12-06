@@ -37,7 +37,7 @@ public class KeyGenerator {
      * @param size Size of the key in bit length
      */
     public KeyGenerator(int size) {
-        probablePrime = new ProbablePrime(1024, 10, new Random());
+        probablePrime = new ProbablePrime(size, 10, new Random());
         eea = new ExtendedEuclideanAlgorithm();
 
         
