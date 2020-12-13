@@ -5,6 +5,7 @@ import rsa.domain.KeyGenerator;
 import rsa.domain.PrivateKey;
 import rsa.domain.PublicKey;
 import rsa.utils.MessageConverter;
+import rsa.utils.PerformanceTester;
 
 import java.io.*;
 import java.math.BigInteger;
@@ -34,11 +35,12 @@ public class TextUi {
             if (action.equals("1")) handleCaseOne();
             if (action.equals("2")) handleCaseTwo();
             if (action.equals("3")) handleCaseThree();
+            if (action.equals("4")) handleCaseFour();
         }
     }
 
     public void handleCaseOne() {
-        KeyGenerator kg = new KeyGenerator(1024);
+        KeyGenerator kg = new KeyGenerator(2048);
         try {
             FileWriter fileWriter = new FileWriter("keys.txt");
             fileWriter.write(kg.getPublicKey().toString());
@@ -98,8 +100,11 @@ public class TextUi {
         }catch (IOException e) {
             System.out.println("Required files not found. Try generating them first.");
         }
+    }
 
-
+    public void handleCaseFour() {
+        PerformanceTester pt = new PerformanceTester();
+        pt.run();
     }
 
     public void printInfo() {
@@ -107,6 +112,7 @@ public class TextUi {
         System.out.println("\t 1. Create keys");
         System.out.println("\t 2. Encrypt a message");
         System.out.println("\t 3. Decrypt a message");
+        System.out.println("\t 4. Run performance test");
         System.out.println("\t Type 'exit' to exit the program");
         System.out.println("\t Type 'info' to print this info\n");
     }

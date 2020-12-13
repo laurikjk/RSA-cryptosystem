@@ -4,6 +4,7 @@ package rsa.domain;
 
 import rsa.algorithms.ExtendedEuclideanAlgorithm;
 import rsa.algorithms.ProbablePrime;
+import rsa.algorithms.RandomNumber;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -24,7 +25,7 @@ public class KeyGenerator {
     private BigInteger e;
     private BigInteger d;
     
-    private SecureRandom random;
+    private RandomNumber random;
     
     private PublicKey publicKey;
     private PrivateKey privateKey;
@@ -40,8 +41,7 @@ public class KeyGenerator {
         probablePrime = new ProbablePrime(size, 10, new Random());
         eea = new ExtendedEuclideanAlgorithm();
 
-        
-        random = new SecureRandom();
+        random = new RandomNumber();
 
         p = probablePrime.generateLargePrime();
         q = probablePrime.generateLargePrime();

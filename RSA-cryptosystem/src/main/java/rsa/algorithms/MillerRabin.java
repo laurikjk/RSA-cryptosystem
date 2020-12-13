@@ -1,7 +1,6 @@
 package rsa.algorithms;
 
 import java.math.BigInteger;
-import java.security.SecureRandom;
 
 public class MillerRabin {
 
@@ -54,7 +53,7 @@ public class MillerRabin {
      * @return random number
      */
     private BigInteger rand(BigInteger max) {
-        SecureRandom secrnd = new SecureRandom();
+        RandomNumber secrnd = new RandomNumber();
         BigInteger rnd;
         do {
             rnd = new BigInteger(max.bitLength(), secrnd);
