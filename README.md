@@ -27,7 +27,7 @@ mvn test
 
 Create coverage report to /target/site/jacoco/index.html :
 ```
-mvn jacoco:report
+mvn test jacoco:report
 ```
 
 Create javadoc: 
