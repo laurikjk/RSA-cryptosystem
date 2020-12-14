@@ -14,7 +14,6 @@
 
         <module name='EmptyBlock' />
         <module name='LeftCurly' />
-        <module name='NeedBraces' />
         <module name='RightCurly' />
         <module name='AvoidNestedBlocks' />
         <module name="NestedIfDepth">
@@ -31,7 +30,7 @@
         <module name="OneStatementPerLine"/>
         <module name="MethodLength">
             <property name="tokens" value="METHOD_DEF"/>
-            <property name="max" value="20"/>
+            <property name="max" value="30"/>
             <property name="countEmpty" value="false"/>
         </module>
 

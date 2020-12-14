@@ -33,7 +33,7 @@ public class MillerRabin {
             d = d.divide(two);
         }
 
-        for (int i = 0; i < rounds; i++){
+        for (int i = 0; i < rounds; i++) {
             BigInteger a = rand(primeCandidate.subtract(two));
             BigInteger x = a.modPow(d, primeCandidate);
             if (x.equals(BigInteger.ONE) || x.equals(primeCandidate.subtract(BigInteger.ONE))) continue;

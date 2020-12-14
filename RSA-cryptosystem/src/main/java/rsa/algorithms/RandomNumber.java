@@ -13,7 +13,7 @@ public class RandomNumber extends Random {
         res += (System.nanoTime() % 10_000) * 10_000;
         res += (System.nanoTime() % 10_000) * 100_000_000;
         res = res % 1_000_000_000;
-        int result = (int)(res & Integer.MAX_VALUE);
+        int result = (int) (res & Integer.MAX_VALUE);
         return result;
     }
 

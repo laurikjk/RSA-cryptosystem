@@ -34,6 +34,8 @@ public class KeyGenerator {
     /**
      *  Generates keys when class gets called
      *  Keys can be called through getters
+     *
+     *  The variables have been named the same as wikipedia's pseudocode
      * 
      * @param size Size of the key in bit length
      */

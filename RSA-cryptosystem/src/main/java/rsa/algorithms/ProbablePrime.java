@@ -26,7 +26,7 @@ public class ProbablePrime {
 
     public BigInteger generateLargePrime() {
         BigInteger candidate = new BigInteger(bitSize, random);
-        while(!millerRabin.test(candidate, certainty)) {
+        while (!millerRabin.test(candidate, certainty)) {
             candidate = new BigInteger(bitSize, random);
         }
         return candidate;
