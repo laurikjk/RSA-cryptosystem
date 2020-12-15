@@ -23,7 +23,7 @@ public class TextUi {
         encryption = new Encryption();
     }
 
-    public void run() {
+    public void run() throws IOException {
         String action;
         printInfo();
         while(true) {
@@ -102,7 +102,7 @@ public class TextUi {
         }
     }
 
-    public void handleCaseFour() {
+    public void handleCaseFour() throws IOException {
         PerformanceTester pt = new PerformanceTester();
         pt.run();
     }
