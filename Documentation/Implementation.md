@@ -45,7 +45,9 @@ The modular inverse of a is calculated with xgcd(mod, a) and getting the returne
 
 ## Complexity and performance
 
-Will be added soon..
+### Times with different typical key sizes
+
+<img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/RSA%20times.png />
 
 ## Possible improvements
 
