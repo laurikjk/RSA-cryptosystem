@@ -49,7 +49,11 @@ The modular inverse of a is calculated with xgcd(mod, a) and getting the returne
 
 <img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/RSA%20times.png />
 
-(Time is nanoseconds)
+Time is still in nanoseconds.
+Bars are means of tested times
+* 1000 repetitions with 1024 bit key
+* 100 repetitions with 2048 bit key
+* 10 repetitions with 4096 bit key
 
 ## Possible improvements
 
