@@ -58,4 +58,4 @@ Bars are means of tested times
 ## Possible improvements
 
 * Hashing and padding the message
-* Optimizing miller rabin with checking only odd numbers
+
