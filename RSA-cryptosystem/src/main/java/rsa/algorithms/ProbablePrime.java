@@ -11,6 +11,7 @@ public class ProbablePrime {
     private Random random;
 
     /**
+     * Calculates a probable prime
      *
      *
      * @param bitSize size of strong probable prime

@@ -1,4 +1,4 @@
-package rsa.utils;
+package rsa.ui;
 
 import rsa.algorithms.ExtendedEuclideanAlgorithm;
 import rsa.algorithms.MillerRabin;
@@ -26,6 +26,7 @@ public class PerformanceTester {
             kg = new KeyGenerator(1024);
             t2 = System.nanoTime();
             times1024[i] = t2 - t1;
+            System.out.println("Done: " + i);
         }
         long[] times2048 = new long[100];
         for (int i = 0; i < 100; i++) {
@@ -33,6 +34,7 @@ public class PerformanceTester {
             kg = new KeyGenerator(2048);
             t2 = System.nanoTime();
             times2048[i] = t2 - t1;
+            System.out.println("Done: " + i);
         }
         long[] times4096 = new long[10];
         for (int i = 0; i < 10; i++) {
@@ -40,21 +42,19 @@ public class PerformanceTester {
             kg = new KeyGenerator(4096);
             t2 = System.nanoTime();
             times4096[i] = t2 - t1;
+            System.out.println("Done: " + i);
         }
         System.out.println("Results with 1024:");
         for (int i = 0; i < 1000; i++) {
             fw.write(times1024[i] + ",");
-            System.out.println("Done: " + i);
         }
         System.out.println("Results with 2048");
         for (int i = 0; i < 100; i++) {
-            fw1.write(times1024[i] + ",");
-            System.out.println("Done: " + i);
+            fw1.write(times2048[i] + ",");
         }
         System.out.println("Results with 4096");
         for (int i = 0; i < 10; i++) {
-            fw2.write(times1024[i] + ",");
-            System.out.println("Done: " + i);
+            fw2.write(times4096[i] + ",");
         }
         fw.close();
         fw1.close();

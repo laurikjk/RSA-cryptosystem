@@ -8,12 +8,10 @@ public class MillerRabin {
     private final BigInteger two = new BigInteger("2");
 
     /**
-     *         n                 = 2^r * d + 1
-     *         n - 1             = 2^r * d
      *         (n - 1) / ( 2^r ) = d
      *         where n is primeCandidate,
      *         r is a integer
-     *         and d is an odd integer (optimize later)
+     *         and d is an odd integer
      *
      * @param primeCandidate number to test for primality
      * @param rounds how many rounds of testing

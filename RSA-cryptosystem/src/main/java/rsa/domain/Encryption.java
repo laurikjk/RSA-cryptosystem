@@ -8,7 +8,8 @@ package rsa.domain;
 import java.math.BigInteger;
 
 /**
- * 
+ * Encryption and decryption with keys
+ *
  * @author LauriKajakko
  */
 public class Encryption {

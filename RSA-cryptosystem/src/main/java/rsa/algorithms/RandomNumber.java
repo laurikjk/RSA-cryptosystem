@@ -5,6 +5,8 @@ import java.util.Random;
 public class RandomNumber extends Random {
 
     /**
+     * Random number based on nanotime. just nextInt.
+     *
      * @return random number based on system nanotime
      */
     @Override

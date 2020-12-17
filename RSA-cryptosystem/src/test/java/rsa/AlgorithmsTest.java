@@ -3,9 +3,12 @@ package rsa;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
+
+import rsa.algorithms.ExtendedEuclideanAlgorithm;
 import rsa.algorithms.MillerRabin;
 
 import java.math.BigInteger;
+import java.util.Random;
 
 public class AlgorithmsTest {
 
@@ -33,6 +36,19 @@ public class AlgorithmsTest {
             BigInteger candidate = new BigInteger(nonPrime);
             boolean pass = millerRabin.test(candidate, 10);
             assertTrue(!pass);
+        }
+    }
+
+    //We can test only primes because in RSA there is only primes given to modinverse
+    //There is no need for checking non invertible
+    @Test
+    public void modularInverseReturnsSameAsModInverse() {
+        Random random = new Random();
+        ExtendedEuclideanAlgorithm eea = new ExtendedEuclideanAlgorithm();
+        for (int i = 0; i < 10; i++){
+            BigInteger toTest = BigInteger.probablePrime(2048, random);
+            BigInteger testMod = BigInteger.probablePrime(2048, random);
+            assertTrue(toTest.modInverse(testMod).equals(eea.modularInverse(toTest, testMod)));
         }
     }
 }

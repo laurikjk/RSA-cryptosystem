@@ -5,7 +5,6 @@ import rsa.domain.KeyGenerator;
 import rsa.domain.PrivateKey;
 import rsa.domain.PublicKey;
 import rsa.utils.MessageConverter;
-import rsa.utils.PerformanceTester;
 
 import java.io.*;
 import java.math.BigInteger;
