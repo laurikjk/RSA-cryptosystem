@@ -4,7 +4,7 @@
 
 <img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/Screenshot%20from%202020-12-17%2015-33-16.png />
 
-* There is an end to end test that uses message conversion and RSA 
+* RSA is tested end to end 
 * All the algorithms are tested separately
 
 ### Performance tests:
