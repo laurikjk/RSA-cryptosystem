@@ -2,17 +2,18 @@
 
 ### Coverage report
 
-<img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/Screenshot%20from%202020-12-04%2016-23-38.png />
+<img ssrc=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/Screenshot%20from%202020-12-17%2015-33-16.png />
 
 * There is an end to end test that uses message conversion and RSA 
-* Miller-Rabin is also tested separately
-* xgcd needs unit testing
-* There is some unnecessary branches that might need removing
+* All the algorithms are tested separately
 
 ### Performance tests:
 
-Here is a test of the times it takes to decrypt and encrypt messages. Tested with a small message and a 117byte one.
 
-<img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/performancetest_week4.png />
+<img src=https://github.com/LauriKajakko/RSA-cryptosystem/blob/main/Documentation/images/RSA%20times.png />
 
-(the test above was made into junit tests and will be refactored to their own class)
+Time is still in nanoseconds.
+Bars are means of tested times
+* 1000 repetitions with 1024 bit key
+* 100 repetitions with 2048 bit key
+* 10 repetitions with 4096 bit key
